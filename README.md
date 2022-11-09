@@ -1,5 +1,13 @@
 # openmpi-kma
 
+### Change log
+Image on Docker Hub - https://hub.docker.com/r/olehkurpiak/openapi-kma
+
+#### 1.2
+- added host file. gives ability to simulate more processors, then available on machine. https://github.com/borsch/openmpi-kma/pull/1 
+#### 1.1
+- Initial release
+
 ### Docker
 Run Docker image using `docker run -it -v PROJECT_LOCATION:/tmp/project -v LOCAL_M2_PATH:/root/.m2 --name openmpi-kma olehkurpiak/openapi-kma:1.1`
 
