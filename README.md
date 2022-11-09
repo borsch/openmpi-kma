@@ -30,3 +30,12 @@ You can also build java project using Maven <b>with-in</b> docker container.
 ### Running "Hello world" with-in container
 
 Inside container run command `mpirun -np 1 java -cp /tmp/project/target/classes com/mathpar/NAUKMA/examples/HelloWorldParallel` (Note: `/tmp/project` as a root of classpath)
+
+### Hostfile
+Initially docker could run only 5 processors but it can be increased.
+The file which sets the number of available processors is located under path `/root/hostfile` inside a container.
+By default number of processors is set to 40.
+
+### Running "Hello world" with-in container with hostfile
+
+Inside container run command `mpirun --hostfile /root/hostfile -np 20 java -cp /tmp/project/target/classes com/mathpar/NAUKMA/examples/HelloWorldParallel` (Note: `/tmp/project` as a root of classpath)
